@@ -17,6 +17,10 @@
 <script src="build/decibel-meter.js"></script>
 
 <script>
+	alert("Error logging is set to alerts.")
+	window.onerror = function(error, url, line) {
+    		alert("Error (line "+line+"): "+error);
+	};
 
 	// HTML elements
 	
@@ -39,8 +43,14 @@
 	
 	meter.on('sample', function (dB, percent, level) {
 		levelEl.style.height = (percent * 100) + '%';
+<<<<<<< HEAD
 		if (percent > .5){
                   alert('Uh-hu...')
+=======
+		alert("dB: "+dB+", percent: "+percent)
+		if (percent > .5){
+                  alert('Blah')
+>>>>>>> 33e3aa1032d9d6f6bc865f893a6dadf31b9b1846
                 }
 	});
 	

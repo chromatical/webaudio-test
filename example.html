@@ -17,6 +17,9 @@
 <script src="build/decibel-meter.js"></script>
 
 <script>
+	window.onerror = function(error, url, line) {
+    		alert("Error (line "+line+"): "+error);
+	};
 
 	// HTML elements
 	

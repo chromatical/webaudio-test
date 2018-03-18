@@ -39,6 +39,9 @@
 	
 	meter.on('sample', function (dB, percent, level) {
 		levelEl.style.height = (percent * 100) + '%';
+		if (percent > .5){
+                  alert('Uh-hu...')
+                }
 	});
 	
 	// change element class when meter starts listening
@@ -62,7 +65,13 @@
 		else
 			meter.listen();
 	});
+window.onerror = function(error, url, line) {
+    alert("Error (line "+line+"): "+error);
+};
+
+blah
 
 </script>
 </body>
 </html>
+

@@ -1,10 +1,12 @@
 <p id="levelblah">0</p>
-<script src="dist/decibel-meter.js"></script>
 <script>
 alert("Error logging is set to alerts.")
 window.onerror = function(error, url, line) {
   alert("Error (line "+line+"): "+error);
 }
+</script>
+<script src="dist/decibel-meter.js"></script>
+<script>
 levelblah = document.getElementById('levelblah')
 new DecibelMeter().listenTo(0, (dB, percent, value) => {
   levelblah.innerText = value

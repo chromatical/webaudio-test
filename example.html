@@ -39,6 +39,8 @@
 	
 	meter.on('sample', function (dB, percent, level) {
 		levelEl.style.height = (percent * 100) + '%';
+		console.log(percent)
+		console.log(dB)
 	});
 	
 	// change element class when meter starts listening
